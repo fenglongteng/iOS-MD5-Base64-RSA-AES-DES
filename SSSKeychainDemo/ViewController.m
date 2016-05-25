@@ -40,7 +40,7 @@
     NSLog(@"%@",md5);
     NSLog(@"%lu",(unsigned long)md5.length);
     
-    // AES加密  （高级加密标准） 对称加密
+    // AES加密  （高级加密标准） 对称加密 这里可以吧userName看做password的Key
     NSString *encryptedData = [AESCrypt encrypt:userName password:password];//加密
     NSString *message = [AESCrypt decrypt:encryptedData password:password]; //解密
     NSLog(@"加密结果 = %@",encryptedData);
